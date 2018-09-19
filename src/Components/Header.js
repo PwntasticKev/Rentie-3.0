@@ -11,6 +11,7 @@ const Container = styled.section`
   display: flex;
   justify-content: center;
   height: 52px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
   @media (min-width: 768px) {
     justify-content: space-between;
   }
@@ -80,8 +81,9 @@ const MobileMenu = styled.section`
   right: -190px;
   width: 170px;
   z-index: 2;
-  transform: ${props => props.display};
-  transition: transform 0.5s ease-in-out;
+  transform: ${props => props.translate};
+  display: ${props => props.display};
+  transition: transform 0.5s 0.3s ease-in-out display 0.001s ease-in-out;
   padding: 10px;
   @media (min-width: 767px) {
     right: -270px;
@@ -113,7 +115,10 @@ export default class Header extends Component {
           <Span>SignUp</Span>
           <Span>Log In</Span>
         </DesktopMenu>
-        <MobileMenu display={this.state.mobileMenu ? "translate(-190px)" : ""}>
+        <MobileMenu
+          translate={this.state.mobileMenu ? "translate(-190px)" : ""}
+          display={this.state.mobileMenu ? "flex" : "none"}
+        >
           <Span>Listings</Span>
           <Span>Post Listing</Span>
           <Span>SignUp</Span>
