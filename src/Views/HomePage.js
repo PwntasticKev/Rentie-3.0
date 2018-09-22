@@ -6,7 +6,7 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header onClick={_ => alert("main Header")} />
         <HomePageSearch />
       </div>
     )

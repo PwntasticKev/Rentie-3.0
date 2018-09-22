@@ -35,6 +35,7 @@ const BurgerContainer = styled.section`
 const Bline = styled.div`
   border-bottom: 4px solid
     ${props => (props.color === true ? "black" : "white")};
+  transition: color 1s ease-in-out;
 
   &:first-child {
     transform: ${props =>
@@ -66,6 +67,7 @@ const DesktopMenu = styled.section`
 
 const Span = styled.span`
   margin-left: 16px;
+  cursor: pointer;
   padding: 10px 0;
   &:first-child {
     margin-top: 40px;
@@ -74,16 +76,16 @@ const Span = styled.span`
 
 const MobileMenu = styled.section`
   background: white;
-  display: flex;
   flex-direction: column;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   right: -190px;
   width: 170px;
   z-index: 2;
+  ${"" /* display: ${props => props.display}; */} display:flex;
   transform: ${props => props.translate};
-  display: ${props => props.display};
-  transition: transform 0.5s 0.3s ease-in-out display 0.001s ease-in-out;
+  transition-delay: 1s, 0.1s;
+  transition: transform 0.5s ease-in-out, display 3s ease-in-out;
   padding: 10px;
   @media (min-width: 767px) {
     right: -270px;
@@ -119,7 +121,9 @@ export default class Header extends Component {
           translate={this.state.mobileMenu ? "translate(-190px)" : ""}
           display={this.state.mobileMenu ? "flex" : "none"}
         >
-          <Span>Listings</Span>
+          <Span>
+            <a href="https://myrentie.com/listings">Listings</a>
+          </Span>
           <Span>Post Listing</Span>
           <Span>SignUp</Span>
           <Span>Log In</Span>
