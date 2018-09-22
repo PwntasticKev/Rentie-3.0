@@ -34,21 +34,21 @@ const BurgerContainer = styled.section`
 
 const Bline = styled.div`
   border-bottom: 4px solid
-    ${props => (props.color === true ? "black" : "white")};
+    ${props => (props.Lcolor === true ? "black" : "white")};
   transition: color 1s ease-in-out;
 
   &:first-child {
     transform: ${props =>
-      props.color === true ? "translate(5%, 123%) rotate(45deg)" : ""};
+      props.Lcolor === true ? "translate(5%, 123%) rotate(45deg)" : ""};
     transition: transform 0.25s ease-in-out;
   }
   &:nth-child(2) {
-    display: ${props => (props.color === true ? "none" : "block")};
+    display: ${props => (props.Lcolor === true ? "none" : "block")};
     transition: display 0.25s ease-in-out;
   }
   &:last-child {
     transform: ${props =>
-      props.color === true ? "translate(5%, -145%) rotate(-45deg)" : ""};
+      props.Lcolor === true ? "translate(5%, -145%) rotate(-45deg)" : ""};
     transition: transform 0.25s ease-in-out;
   }
 `
@@ -107,9 +107,9 @@ export default class Header extends Component {
       <Container>
         <Img src={Logo} alt="Rentie Logo" />
         <BurgerContainer onClick={_ => this.mobileMenu(this.state.mobileMenu)}>
-          <Bline color={this.state.mobileMenu} />
-          <Bline color={this.state.mobileMenu} />
-          <Bline color={this.state.mobileMenu} />
+          <Bline Lcolor={this.state.mobileMenu} />
+          <Bline Lcolor={this.state.mobileMenu} />
+          <Bline Lcolor={this.state.mobileMenu} />
         </BurgerContainer>
         <DesktopMenu>
           <Span>Listings</Span>

@@ -1,11 +1,7 @@
-const initialState = {
-  mobileMenu: false
-}
+const initialState = {}
 
 //Action types
-const MOBILE_MENU_ACTIVE = "MOBILE_MENU_ACTIVE"
 //Action Creators
-export function mobileMenu(bool) {}
 
 //Object.assign cases
 
