@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="84px" height="126px" viewBox="0 0 84 126" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Group" transform="translate(4.750000, 4.349030)" fill-rule="nonzero" stroke="#547086" stroke-width="9">
+            <path d="M37.25,0.793764385 L37.25,114.5" id="Line"></path>
+            <path d="M37.3746689,116.193495 L74.1802386,72.8997306" id="Line-2"></path>
+            <path d="M0.569099115,116.193495 L37.3746689,72.8997306" id="Line-2" transform="translate(18.971884, 94.546613) scale(-1, 1) translate(-18.971884, -94.546613) "></path>
+        </g>
+    </g>
+</svg>

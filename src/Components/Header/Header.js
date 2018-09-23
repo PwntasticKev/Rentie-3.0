@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Logo from "../assets/WhiteRentie.png"
+import Logo from "../../assets/WhiteRentie.png"
 import styled from "styled-components"
 
 const Img = styled.img`
@@ -21,7 +21,7 @@ const BurgerContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: absolute;
+  position: ${props => (props.position ? "fixed" : "absolute")};
   right: 15px;
   top: 15px;
   height: 22px;
@@ -106,7 +106,10 @@ export default class Header extends Component {
     return (
       <Container>
         <Img src={Logo} alt="Rentie Logo" />
-        <BurgerContainer onClick={_ => this.mobileMenu(this.state.mobileMenu)}>
+        <BurgerContainer
+          position={this.state.mobileMenu}
+          onClick={_ => this.mobileMenu(this.state.mobileMenu)}
+        >
           <Bline Lcolor={this.state.mobileMenu} />
           <Bline Lcolor={this.state.mobileMenu} />
           <Bline Lcolor={this.state.mobileMenu} />
