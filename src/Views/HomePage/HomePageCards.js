@@ -1,26 +1,23 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import background from "../../assets/Gradient_Bottom_Top.png"
 import house from "../../assets/house.png"
 
 const Container = styled.section`
-  background: url(${background});
-  background-size: cover;
-  background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
   padding-top: 32px;
-  height: 60vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  padding-bottom: 7px;
 `
 
 const CardContainer = styled.section`
-  width: 250px;
+  width: 280px;
   height: 223px;
   border-radius: 5px;
   background: white;
-  padding: 5px;
+  padding: 15px;
   margin-bottom: 12px;
   box-shadow: 0px 4px 16px -4px rgba(0, 0, 0, 1);
 `
@@ -31,8 +28,15 @@ const HouseImg = styled.img`
 `
 
 const Button = styled.button`
-  width: 200px;
-  background: blue;
+  width: 310px;
+  background: white;
+  padding: 10px;
+  color: #547086;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  box-shadow: 0px 4px 16px -4px rgba(0, 0, 0, 1);
+  margin-bottom: 35px;
 `
 
 const HouseName = styled.div`
@@ -51,11 +55,12 @@ const Rating = styled.div`
   margin: 3px 0;
 `
 const FeaturedListings = styled.div`
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   letter-spacing: 0.25px;
   margin-bottom: 20px;
-  color: #547086;
+  color: white;
+  font-weight: 500;
 `
 
 export default class HomePageCards extends Component {
@@ -65,7 +70,9 @@ export default class HomePageCards extends Component {
   }
 
   render() {
+    // eslint-disable-next-line
     let cardArray = [...this.state.cardCount]
+    // eslint-disable-next-line
     let card = (
       <CardContainer>
         <div>

@@ -7,12 +7,10 @@ const Img = styled.img`
 `
 
 const Container = styled.section`
-  background: #547086;
-  display: flex;
+  ${"" /* background: #547086; */} display: flex;
   justify-content: center;
   height: 52px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
-  @media (min-width: 768px) {
+  ${"" /* box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5); */} @media (min-width: 768px) {
     justify-content: space-between;
   }
 `
@@ -82,7 +80,7 @@ const MobileMenu = styled.section`
   right: -190px;
   width: 170px;
   z-index: 2;
-  ${"" /* display: ${props => props.display}; */} display:flex;
+  display: flex;
   transform: ${props => props.translate};
   transition-delay: 1s, 0.1s;
   transition: transform 0.5s ease-in-out, display 3s ease-in-out;

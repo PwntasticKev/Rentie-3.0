@@ -2,13 +2,9 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import Footer from "../../Components/Footer/Footer"
 import HomePageCards from "./HomePageCards"
-import background from "../../assets/gradientbackground_1.png"
 
 const Container = styled.section`
-  background: url(${background});
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 63vh;
+  height: 100%;
 `
 
 const InputContainer = styled.section`
@@ -38,7 +34,7 @@ const Title = styled.h1`
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 60px 0;
+  padding: 60px 0 40px;
   font-size: 27px;
   color: white;
   text-shadow: -2px 1px 6px rgba(150, 150, 150, 1);
